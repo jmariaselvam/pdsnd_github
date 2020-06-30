@@ -124,12 +124,13 @@
         print('\nCalculating Trip Duration...\n')
         timer = MethodTimer()
 
+        trip_duration = df['Trip Duration']
         # Display the total travel time
-        total_in_seconds = df['Trip Duration'].sum()
+        total_in_seconds = trip_duration.sum()
         print("The Total Travel Time is :: %s " % time.strftime('%H:%M:%S', time.gmtime(total_in_seconds))) 
 
         # Display the average travel time
-        average_in_seconds = df['Trip Duration'].mean()
+        average_in_seconds = trip_duration.mean()
         print("The Average Traval Time is :: %s " % time.strftime('%H:%M:%S', time.gmtime(average_in_seconds)))
 
         timer.print_duration()
