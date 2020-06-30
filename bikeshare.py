@@ -54,9 +54,10 @@
         # convert the Start Time column to datetime
         df['Start Time'] = pd.to_datetime(df['Start Time'])
 
+        start_time = df['Start Time'].dt
         # extract month and day of week from Start Time to create new columns
-        df['month'] = df['Start Time'].dt.month
-        df['day_of_week'] = df['Start Time'].dt.weekday_name
+        df['month'] = start_time.month
+        df['day_of_week'] = start_time.weekday_name
 
         # filter by month if applicable
         if month != 'all':
