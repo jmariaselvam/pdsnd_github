@@ -5,6 +5,10 @@
 
 ### Description
 This project provides a script to analyse bikeshare data for different cities.
+Currently only the following cities are supported:
+* Chicago
+* New York
+* Washington
 
 ### Files used
 * bikeshare.py
