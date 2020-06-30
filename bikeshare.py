@@ -54,9 +54,10 @@
         # convert the Start Time column to datetime
         df['Start Time'] = pd.to_datetime(df['Start Time'])
 
+        start_time = df['Start Time'].dt
         # extract month and day of week from Start Time to create new columns
-        df['month'] = df['Start Time'].dt.month
-        df['day_of_week'] = df['Start Time'].dt.weekday_name
+        df['month'] = start_time.month
+        df['day_of_week'] = start_time.weekday_name
 
         # filter by month if applicable
         if month != 'all':
@@ -123,12 +124,13 @@
         print('\nCalculating Trip Duration...\n')
         timer = MethodTimer()
 
+        trip_duration = df['Trip Duration']
         # Display the total travel time
-        total_in_seconds = df['Trip Duration'].sum()
+        total_in_seconds = trip_duration.sum()
         print("The Total Travel Time is :: %s " % time.strftime('%H:%M:%S', time.gmtime(total_in_seconds))) 
 
         # Display the average travel time
-        average_in_seconds = df['Trip Duration'].mean()
+        average_in_seconds = trip_duration.mean()
         print("The Average Traval Time is :: %s " % time.strftime('%H:%M:%S', time.gmtime(average_in_seconds)))
 
         timer.print_duration()
