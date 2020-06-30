@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+29/06/2020 (DD/MM/YYYY).
 
-### Project Title
-Replace the Project Title
+### Bikeshare Data Analysis
 
 ### Description
-Describe what your project is about and what it does
+This project provides a script to analyse bikeshare data for different cities.
 
 ### Files used
-Include the files used
+* bikeshare.py
+* utils.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+[Pandas documentation](https://pandas.pydata.org/docs/).
 
